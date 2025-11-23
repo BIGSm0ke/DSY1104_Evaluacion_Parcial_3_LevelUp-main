@@ -1,0 +1,191 @@
+.perfil-container {
+  padding: 2.6rem 1.5rem;
+  color: #fff;
+  max-width: 1080px;
+  margin: 3rem auto 3.3rem auto;
+  font-family: 'Roboto', 'Orbitron', Arial, sans-serif;
+  background: linear-gradient(135deg, #181622 60%, #000 100%);
+  border-radius: 19px;
+  box-shadow: 0 9px 36px #9D4EDD29;
+}
+
+.perfil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.2rem;
+  border-bottom: 2px solid #9D4EDD44;
+  padding-bottom: 0.8rem;
+}
+
+.perfil-titulo {
+  margin: 0 0 0.5rem 0;
+  color: #39FF14;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 1.1px;
+  text-shadow: 0 0 12px #39FF1433;
+}
+.perfil-descripcion {
+  margin: 0;
+  opacity: 0.84;
+  color: #D3D3D3;
+}
+
+.perfil-avatar {
+  width: 77px; height: 77px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#39FF14 60%, #FFD700 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: #181622;
+  font-weight: 900;
+  font-size: 2.1rem;
+  box-shadow: 0 7px 15px #FFD70030;
+  border: 2.4px solid #9D4EDD;
+}
+
+.perfil-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3.3rem;
+}
+
+.perfil-personal-info { }
+
+.perfil-subtitulo {
+  color: #9D4EDD;
+  margin-bottom: 1.2rem;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  font-size: 1.11rem;
+  font-weight: 800;
+  letter-spacing: 0.9px;
+}
+
+.perfil-form-group { margin-bottom: 1.1rem; }
+
+.perfil-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #FFD700;
+}
+
+.perfil-input {
+  width: 100%;
+  padding: 0.82rem 1rem;
+  border-radius: 9px;
+  border: 2px solid #9D4EDD;
+  background: #181622;
+  color: #FFD700;
+  font-size: 1.05rem;
+  font-family: 'Roboto', Arial, sans-serif;
+  transition: border-color 0.19s, box-shadow 0.16s;
+}
+.perfil-input:focus {
+  border-color: #39FF14;
+  outline: none;
+  box-shadow: 0 0 0 2px #39FF1440;
+}
+
+.perfil-puntos {
+  color: #39FF14;
+  font-weight: 800;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.8px;
+  text-shadow: 0 0 8px #39FF1440;
+}
+
+.perfil-btn {
+  margin-top: 1.03rem;
+  padding: 0.85rem 1.55rem;
+  background: linear-gradient(90deg,#9D4EDD 47%, #FFD700 100%);
+  color: #181622;
+  border: none;
+  border-radius: 9px;
+  font-weight: 900;
+  font-size: 1.04rem;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 2px 9px #9D4EDD2c;
+  letter-spacing: 0.6px;
+  transition: background 0.15s, color 0.15s, box-shadow 0.13s;
+}
+.perfil-btn:hover {
+  background: linear-gradient(90deg,#FFD700 15%, #9D4EDD 100%);
+  color: #39FF14;
+  box-shadow: 0 7px 22px #FFD70033;
+}
+
+/* Recomendaciones */
+.perfil-recomendaciones {
+  margin-top: 2rem;
+  background: #181622;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.recomendaciones-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.15rem;
+}
+.recomendacion-card {
+  border: 2px solid #9D4EDD44;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #181622;
+  transition: box-shadow 0.13s, border 0.13s;
+  box-shadow: 0 4px 15px #9D4EDD11;
+}
+.recomendacion-card:hover {
+  border-color: #FFD700;
+  box-shadow: 0 11px 26px #FFD70033;
+}
+.recomendacion-img {
+  height: 124px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+}
+.recomendacion-foto {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.recomendacion-datos {
+  padding: 1.1rem 1.2rem 1rem 1.2rem;
+}
+
+.recomendacion-nombre {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.01rem;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  font-weight: 900;
+  color: #FFD700;
+}
+.recomendacion-precio {
+  color: #39FF14;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin: 0;
+  text-shadow: 0 0 9px #39FF1433;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .perfil-main, .recomendaciones-grid {
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+  }
+  .perfil-container {
+    padding: 1.2rem 0.7rem;
+  }
+  .perfil-header {
+    flex-direction: column; align-items: flex-start;
+    gap: .8rem;
+  }
+}

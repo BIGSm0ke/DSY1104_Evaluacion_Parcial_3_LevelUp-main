@@ -1,0 +1,229 @@
+body {
+  font-family: 'Roboto', 'Orbitron', Arial, sans-serif;
+  background: #181622;
+  color: #fff;
+}
+
+.carrito-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.4rem 1rem 2.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carrito-layout {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.7rem;
+  margin-top: 1.3rem;
+  width: 100%;
+}
+
+.carrito-lista {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.17rem;
+  width: 100%;
+  max-width: 640px;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  background: #241a36;
+  border-radius: 17px;
+  box-shadow: 0 2px 17px #9D4EDD22;
+  padding: 1.12rem 1.3rem;
+  margin-bottom: 0.62rem;
+  position: relative;
+  font-size: 1rem;
+  border: 2px solid #9D4EDD66;
+  transition: box-shadow 0.18s, border 0.18s;
+}
+.carrito-item:hover {
+  box-shadow: 0 3px 32px #FFD70033, 0 2px 13px #9D4EDD44;
+  border-color: #FFD700;
+}
+
+.carrito-item-img {
+  width: 62px;
+  height: 62px;
+  object-fit: cover;
+  border-radius: 13px;
+  margin-right: 1.17rem;
+  box-shadow: 0 0 11px #9D4EDD66;
+  border: 2.5px solid #FFD700;
+}
+
+.carrito-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.carrito-item-titulo {
+  font-size: 1.14rem;
+  color: #39FF14;
+  margin: 0 0 3px 0;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  font-weight: 700;
+}
+
+.carrito-item-codigo span {
+  font-size: 0.99rem;
+  color: #D3D3D3;
+  opacity: .82;
+}
+
+.carrito-item-cant-precio {
+  display: flex;
+  align-items: center;
+  gap: 1.09rem;
+  min-width: 120px;
+}
+
+.cantidad-control {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #181031;
+  border-radius: 8px;
+  padding: 0.13em 0.28em;
+}
+
+.cantidad-btn {
+  background: #9D4EDD;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1.14rem;
+  border: none;
+  padding: 0.21em 0.68em;
+  transition: background 0.18s, color 0.16s;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+}
+.cantidad-btn:hover {
+  background: #FFD700;
+  color: #221c3a;
+}
+
+.cantidad-text {
+  font-size: 1.09rem;
+  margin: 0 4px;
+  min-width: 24px;
+  text-align: center;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.carrito-item-price {
+  font-size: 1.13rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin: 0;
+  white-space: nowrap;
+  text-align: right;
+  padding-left: 0.62rem;
+}
+
+.btn-eliminar {
+  font-size: 1.24rem;
+  background: none;
+  color: #ed4b4b;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  cursor: pointer;
+  transition: color 0.18s;
+}
+.btn-eliminar:hover {
+  color: #FFD700;
+}
+
+/* Resumen del carrito */
+.carrito-resumen {
+  background: #221c3a;
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 18px #9D4EDD18;
+  padding: 1.44rem 1.21rem;
+  min-width: 260px;
+  max-width: 338px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.05em;
+  border: 2px solid #FFD70044;
+  text-align: center;
+}
+.carrito-resumen h2 {
+  margin: 0 0 10px 0;
+  color: #FFD700;
+  font-size: 1.23rem;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  font-weight: 700;
+}
+
+.total-precio {
+  font-size: 1.17rem;
+  font-weight: 700;
+  color: #39FF14;
+  margin: 11px 0 9px 0;
+  letter-spacing: 0.7px;
+}
+
+.btn-vaciar, .btn-comprar {
+  background: linear-gradient(90deg, #9D4EDD 13%, #FFD700 100%);
+  color: #fff;
+  border-radius: 9px;
+  border: none;
+  font-size: 1.07rem;
+  font-weight: 700;
+  padding: 0.42em 1.16em;
+  margin-top: 0.14em;
+  box-shadow: 0 1px 8px #FFD70033;
+  cursor: pointer;
+  transition: background 0.13s, color 0.13s, box-shadow 0.13s;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+.btn-vaciar:hover, .btn-comprar:hover {
+  background: linear-gradient(90deg, #FFD700 0%, #9D4EDD 85%);
+  color: #39FF14;
+  box-shadow: 0 0 16px #FFD70033;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .carrito-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+  .carrito-resumen {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+  .toast-pago-exito {
+  position: fixed;
+  bottom: 3.5rem;
+  right: 2.7rem;
+  background: #181622;
+  color: #FFD700;
+  border: 2px solid #9D4EDD;
+  padding: 1.2rem 2.2rem;
+  border-radius: 13px;
+  font-size: 1.08rem;
+  font-family: 'Orbitron','Roboto',Arial,sans-serif;
+  box-shadow: 0 8px 34px #9D4EDD26, 0 1px 8px #FFD70018;
+  z-index: 2001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fadeInUp 0.7s cubic-bezier(.46,.2,.74,.99);
+}
+
+}

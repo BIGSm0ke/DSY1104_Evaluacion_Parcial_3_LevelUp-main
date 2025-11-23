@@ -1,0 +1,161 @@
+/* Variables pauta B */
+:root {
+  --fondo: #181622;
+  --fondo-main: #000000;
+  --morado: #9D4EDD;
+  --dorado: #FFD700;
+  --dorado-oscuro: #b8943c;
+  --verde-neon: #39FF14;
+  --azul-electric: #1E90FF;
+  --texto: #FFFFFF;
+  --texto-secundario: #D3D3D3;
+  --fuente-principal: 'Roboto', sans-serif;
+  --fuente-encabezado: 'Orbitron', sans-serif;
+}
+
+/* Bloque externo del panel opiniones */
+.opiniones-bloque {
+  max-width: 700px; /* igual a bloque producto */
+  min-width: 320px;
+  margin: 3rem auto 0 auto;
+  background: var(--fondo);
+  border-radius: 16px;
+  box-shadow: 0 4px 44px var(--morado)55, 0 2px 18px var(--dorado-oscuro)88;
+  border: 2.5px solid var(--morado);
+  padding: 2.6rem 2.7rem 2.5rem 2.7rem;
+  font-family: var(--fuente-principal);
+}
+
+/* Header opiniones */
+.opiniones-header h3 {
+  color: var(--verde-neon);
+  font-family: var(--fuente-encabezado);
+  font-size: 1.27rem;
+  font-weight: bold;
+  margin-bottom: 0.7em;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 12px #39ff1433;
+}
+
+.opiniones-promedio {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--dorado);
+  background: #13131d;
+  border-radius: 8px;
+  padding: 0.22rem 0.85rem;
+  font-family: var(--fuente-encabezado);
+  font-weight: 600;
+  font-size: 1.08rem;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 2px 8px var(--dorado)44;
+}
+
+.estrellas-promedio,
+.estrellas {
+  color: var(--dorado);
+  font-size: 1.10rem;
+  letter-spacing: 0.3px;
+}
+.valor-promedio,
+.contador-opiniones {
+  font-size: 1.09rem;
+  color: var(--dorado);
+  font-weight: 700;
+  margin-left: 0.2em;
+}
+
+/* Formulario */
+.form-opinion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1.1rem;
+}
+.input-opinion,
+.input-calificacion {
+  border-radius: 8px;
+  border: 1.5px solid #23233a;
+  background: #23233a;
+  color: var(--texto);
+  padding: 0.66rem 1.13rem;
+  font-family: var(--fuente-principal);
+  font-size: 1rem;
+  box-shadow: 0 2px 8px var(--morado)44;
+  transition: border 0.2s;
+}
+.input-opinion:focus,
+.input-calificacion:focus {
+  outline: none;
+  border-color: var(--dorado-oscuro);
+}
+.label-textarea,
+.label-select {
+  color: var(--dorado);
+  font-family: var(--fuente-encabezado);
+  font-size: 1.04em;
+  margin-bottom: 0.21em;
+}
+
+/* Botón */
+.btn-enviar-opinion {
+  background: linear-gradient(90deg, var(--morado) 62%, var(--dorado) 100%);
+  color: #23233a;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 43px;
+  cursor: pointer;
+  margin-top: 0.7rem;
+  transition: background 0.21s, color 0.13s, box-shadow 0.14s;
+  box-shadow: 0 2px 10px var(--morado)44;
+  font-family: var(--fuente-encabezado);
+  letter-spacing: 1px;
+}
+.btn-enviar-opinion:hover {
+  background: linear-gradient(90deg, var(--dorado) 0%, var(--morado) 85%);
+  color: #241a36;
+  box-shadow: 0 4px 20px var(--dorado)44;
+}
+
+/* Opiniones list */
+.lista-opiniones {
+  margin-top: 1.15rem;
+}
+
+.opinion-item {
+  background: #221c3a;
+  border-radius: 8px;
+  border: 1.3px solid var(--morado)44;
+  padding: 0.91rem 1.25rem;
+  color: var(--dorado);
+  margin-bottom: 0.7rem;
+  font-size: 0.98rem;
+  font-family: var(--fuente-principal);
+  box-shadow: 0 2.5px 12px var(--morado)22;
+}
+.opinion-cabecera {
+  display: flex;
+  align-items: center;
+  gap: 1.44rem;
+  margin-bottom: 0.18rem;
+  font-size: 1.04rem;
+}
+.fecha-opinion {
+  color: var(--texto-secundario);
+  font-size: 0.92rem;
+  opacity: 0.72;
+}
+.opinion-comentario {
+  color: var(--texto);
+  font-size: 1.11rem;
+}
+
+.mensaje-sin-opiniones {
+  color: #aaa;
+  text-align: center;
+  padding: 0.8em 0 0.2em 0;
+}
+

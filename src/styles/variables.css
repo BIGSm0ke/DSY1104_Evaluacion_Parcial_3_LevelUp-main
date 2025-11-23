@@ -1,0 +1,9 @@
+:root {
+  --fondo: #000000;
+  --texto: #FFFFFF;
+  --texto-secundario: #D3D3D3;
+  --acento-azul: #1E90FF;
+  --acento-verde: #39FF14;
+  --fuente-principal: 'Roboto', sans-serif;
+  --fuente-encabezado: 'Orbitron', sans-serif;
+}

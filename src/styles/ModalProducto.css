@@ -1,0 +1,289 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(24, 22, 34, 0.96);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(16px);
+  animation: fadeIn 0.36s ease;
+}
+
+.modal-content {
+  background: #181622;
+  border-radius: 36px;
+  border: 2.4px solid #9D4EDD;
+  box-shadow: 0 22px 52px #9D4EDD70;
+  width: 93%;
+  max-width: 1020px;
+  max-height: 81vh;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  animation: scaleIn 0.33s ease;
+}
+
+.modal-close {
+  position: absolute;
+  top: 17px; right: 17px;
+  background: linear-gradient(135deg,#ff3333 60%, #cc0000 99%);
+  color: #fff;
+  border: none;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  font-size: 1.63rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.21s, transform 0.23s, box-shadow 0.19s;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 14px #ff333388;
+  border: 2px solid #cc0000;
+}
+.modal-close:hover {
+  background: linear-gradient(135deg, #cc0000 66%, #ff3333 100%);
+  transform: scale(1.13);
+  box-shadow: 0 10px 20px #ff333388;
+}
+
+/* Lado izquierdo: imagen */
+.modal-header {
+  flex: 1;
+  height: 420px;
+  overflow: hidden;
+  border-top-left-radius: 36px;
+  border-bottom-left-radius: 36px;
+  border-right: 2px solid #9D4EDD;
+  position: relative;
+  background: #222034;
+}
+.modal-imagen {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.69s cubic-bezier(.54,.22,.7,.93);
+}
+.modal-header:hover .modal-imagen {
+  transform: scale(1.10);
+}
+
+/* Lado derecho: info */
+.modal-body {
+  flex: 1.35;
+  padding: 2.4rem 2.2rem;
+  color: #D3D3D3;
+  display: flex; flex-direction: column;
+}
+.modal-body h2 {
+  color: #FFD700;
+  font-size: 2rem;
+  margin: 0 0 0.66rem 0;
+  text-shadow: 0 0 15px #FFD70044;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  font-weight: 900;
+  line-height: 1.22;
+}
+
+.modal-categoria {
+  color: #39FF14;
+  font-size: 1.13rem;
+  font-weight: 800;
+  margin: 0 0 1.3rem 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0.5rem 1.35rem;
+  background: #9D4EDD22;
+  border-radius: 24px;
+  border: 1.7px solid #9D4EDD;
+  box-shadow: 0 2px 8px #9D4EDD2b;
+}
+
+.modal-descripcion {
+  color: #D3D3D3;
+  font-size: 1.14rem;
+  line-height: 1.74;
+  margin: 0 0 1.8rem 0;
+  border-left: 4px solid #9D4EDD;
+  padding-left: 1.18rem;
+  flex: 1;
+}
+
+.modal-precios {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  margin-bottom: 1.7rem;
+  flex-wrap: wrap;
+}
+.precio-original {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 1.22rem;
+  font-weight: 600;
+}
+.precio-oferta {
+  color: #FFD700;
+  font-size: 2.06rem;
+  font-weight: 900;
+  text-shadow: 0 0 18px #FFD70047;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+}
+.etiqueta-oferta {
+  background: linear-gradient(130deg, #ff3333, #cc0000);
+  color: #fff;
+  font-weight: 900;
+  font-size: 1rem;
+  padding: 0.74rem 1.45rem;
+  border-radius: 12px;
+  margin-bottom: 1.55rem;
+  box-shadow: 0 9px 19px #ff333360;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  animation: pulse 2s infinite;
+  align-self: flex-start;
+}
+
+/* Especificaciones */
+.modal-especificaciones {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: #222034;
+  border-radius: 18px;
+  border: 2px solid #9D4EDD;
+  flex: 1;
+  box-shadow: 0 3px 7px #9D4EDD13;
+}
+.modal-especificaciones h3 {
+  color: #9D4EDD;
+  font-size: 1.36rem;
+  margin: 0 0 1.22rem 0;
+  font-weight: 900;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.modal-especificaciones h3::before { content: "📋"; }
+
+.tabla-especs {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  margin-top: 0.95rem;
+}
+.tabla-especs .clave {
+  color: #9D4EDD;
+  font-weight: 700;
+  padding: 0.72rem 1rem;
+  width: 35%; text-align: left; vertical-align: top;
+  border-bottom: 1px solid #333;
+}
+.tabla-especs .valor {
+  color: #D3D3D3;
+  padding: 0.72rem 1rem;
+  width: 65%; text-align: left;
+  border-bottom: 1px solid #333;
+}
+.tabla-especs tr:last-child .clave,
+.tabla-especs tr:last-child .valor {
+  border-bottom: none;
+}
+.tabla-especs tr:nth-child(even) {
+  background: #18162222;
+}
+
+/* Footer */
+.modal-footer {
+  padding: 1.6rem 0 0 0;
+  display: flex;
+  gap: 1.6rem;
+  border-top: 2px solid #333;
+  background: #222034;
+  border-radius: 0 0 36px 36px;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.btn-agregar {
+  flex: 1;
+  max-width: 240px;
+  padding: 1.06rem;
+  background: linear-gradient(90deg, #9D4EDD 55%, #FFD700 100%);
+  color: #181622;
+  border: none;
+  border-radius: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 1.08rem;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  display: flex;
+  align-items: center; justify-content: center;
+  gap: 0.7rem;
+  box-shadow: 0 8px 22px #9D4EDD44;
+  transition: background 0.22s, box-shadow 0.17s, color 0.14s, transform 0.17s;
+}
+.btn-agregar:hover {
+  background: linear-gradient(90deg, #FFD700 23%, #9D4EDD 97%);
+  color: #39FF14;
+  box-shadow: 0 12px 38px #FFD70033;
+  transform: scale(1.04);
+}
+.btn-cerrar {
+  padding: 1rem 1.8rem;
+  background: #333;
+  color: #FFD700;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  transition: background 0.13s, color 0.13s;
+}
+.btn-cerrar:hover {
+  background: #555;
+  color: #FFD700;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { transform: scale(0.84); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .modal-content {
+    flex-direction: column;
+    max-width: 97%;
+    max-height: 92vh;
+  }
+  .modal-header {
+    border-radius: 36px 36px 0 0;
+    border-right: none;
+    border-bottom: 2px solid #9D4EDD;
+    height: 250px;
+  }
+  .modal-body {
+    padding: 1.3rem 1rem 1.5rem 1rem;
+  }
+  .modal-footer {
+    border-radius: 0 0 36px 36px;
+    flex-direction: column;
+    padding: 1.15rem 0 0 0;
+  }
+  .btn-agregar, .btn-cerrar {
+    max-width: none;
+  }
+}

@@ -1,0 +1,53 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background: var(--fondo) !important; /* negro absoluto */
+  color: var(--texto);
+  font-family: var(--fuente-principal);
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Elimina gradientes de fondo para dejar negro puro */
+body {
+  background-image: none !important;
+}
+
+/* Para que todo el layout principal use el ancho total */
+.main-content {
+  min-height: 82vh; /* depende del header/footer */
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* Encabezados: usa color neón y fuente */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fuente-encabezado);
+  color: var(--acento-verde);
+  letter-spacing: 1px;
+}
+
+.btn {
+  background: linear-gradient(45deg, var(--acento-verde), var(--acento-azul));
+  color: #222;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--fuente-encabezado);
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.93;
+  transform: scale(1.04);
+  box-shadow: 0 0 10px var(--acento-verde);
+}

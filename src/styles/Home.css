@@ -1,0 +1,39 @@
+.bienvenida {
+  text-align: center;
+  margin: 3.2rem 0 2.7rem 0;
+}
+
+.bienvenida h1 {
+  font-size: 2.8rem;
+  color: #39FF14;
+  text-transform: uppercase;
+  text-shadow: 0 0 16px #9D4EDD66, 0 3px 9px #181622bb;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  margin-bottom: 0.7rem;
+  animation: fadeInUp 0.7s ease;
+}
+
+.bienvenida .marca {
+  color: #FFD700;
+  font-style: italic;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  font-size: 1.26em;
+  filter: drop-shadow(0 0 5px #212121);
+  text-shadow: 0 0 7px #FFD70050;
+}
+
+.bienvenida p {
+  font-size: 1.18rem;
+  color: #D3D3D3;
+  margin-top: 0.6rem;
+  text-shadow: 0 0 9px #9D4EDD44, 0 2px 8px #18162299;
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.45;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(18px);}
+  to { opacity: 1; transform: translateY(0);}
+}

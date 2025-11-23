@@ -1,0 +1,307 @@
+.eventos-container {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #181622 0%, #000000 100%);
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Roboto', 'Orbitron', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.eventos-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: 
+    radial-gradient(circle at 10% 20%, #9D4EDD18 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, #FFD70018 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+.eventos-container > * { position: relative; z-index: 1; }
+.eventos-container h1 {
+  color: #39FF14;
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 1.1rem;
+  text-shadow: 0 0 16px #39FF1433;
+  letter-spacing: 1.1px;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  font-weight: 900;
+  animation: fadeInUp 0.8s ease;
+}
+.eventos-container p {
+  text-align: center;
+  color: #D3D3D3;
+  font-size: 1.15rem;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.71;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+/* Grilla de eventos */
+.eventos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 2.32rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+/* Tarjeta de evento */
+.evento-card {
+  background: #1a1a1a;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid #9D4EDD;
+  box-shadow: 0 12px 32px #9D4EDD21;
+  transition: box-shadow 0.33s, border 0.24s, transform 0.22s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.evento-card:hover {
+  transform: translateY(-13px) scale(1.03);
+  box-shadow: 0 24px 54px #FFD70026, 0 2px 18px #9D4EDD55;
+  border-color: #FFD700;
+}
+
+.evento-imagen {
+  height: 190px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #181622;
+  border-bottom: 2px solid #9D4EDD;
+}
+.evento-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+.evento-card:hover .evento-imagen img {
+  transform: scale(1.08);
+}
+.evento-info {
+  padding: 1.5rem 1.2rem 1.2rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.evento-info h3 {
+  color: #FFD700;
+  font-size: 1.27rem;
+  margin: 0 0 0.7rem 0;
+  font-weight: 800;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+}
+.evento-info p {
+  color: #D3D3D3;
+  font-size: 1.04rem;
+  line-height: 1.63;
+  margin: 0 0 1.18rem 0;
+  flex: 1;
+}
+.evento-fecha {
+  color: #39FF14;
+  font-weight: 700;
+  font-size: 1.03rem;
+  margin-bottom: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 0.52rem;
+}
+.evento-ubicacion {
+  color: #FFD700;
+  font-size: 0.96rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.51rem;
+}
+
+.evento-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 1.17rem;
+}
+.evento-link {
+  background: #181622;
+  color: #FFD700;
+  padding: 0.5rem 1.07rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.01rem;
+  border: 2px solid #9D4EDD;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  transition: background 0.23s, border 0.23s, color 0.14s;
+}
+.evento-link:hover {
+  background: #9D4EDD;
+  color: #fff;
+  border-color: #FFD700;
+}
+
+.evento-botones {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+.evento-botones button,
+.evento-botones a {
+  flex: 1;
+  padding: 0.81rem;
+  border: none;
+  border-radius: 9px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1.09rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.19s, box-shadow 0.19s, color 0.17s, transform 0.17s;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+}
+
+.btn-asistir {
+  background: linear-gradient(90deg, #9D4EDD 55%, #FFD700 100%);
+  color: #181622;
+  box-shadow: 0 2px 12px #FFD70022;
+}
+.btn-asistir:hover {
+  background: linear-gradient(90deg, #FFD700 18%, #9D4EDD 100%);
+  color: #39FF14;
+  box-shadow: 0 9px 28px #FFD70044;
+  transform: scale(1.04);
+}
+.btn-mas {
+  background: #222034;
+  color: #fff;
+  font-weight: 700;
+}
+.btn-mas:hover {
+  background: #9D4EDD;
+  color: #FFD700;
+  transform: scale(1.04);
+}
+
+/* Noticias Gamer Oficiales */
+.noticias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1120px;
+  margin: 3.5rem auto 0 auto;
+  animation: fadeInUp 0.8s ease 0.75s both;
+}
+.noticia-card {
+  background: #181622;
+  border-radius: 17px;
+  overflow: hidden;
+  box-shadow: 0 9px 34px #9D4EDD18;
+  border: 2px solid #9D4EDD;
+  transition: box-shadow 0.19s, border 0.18s, transform 0.19s;
+  display: flex;
+  flex-direction: column;
+}
+.noticia-card:hover {
+  transform: translateY(-9px) scale(1.03);
+  box-shadow: 0 18px 55px #FFD70044, 0 3px 14px #9D4EDD28;
+  border-color: #FFD700;
+}
+.noticia-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+.noticia-info {
+  padding: 1.1rem 1.3rem 1.3rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.noticia-info h4 {
+  color: #FFD700;
+  font-size: 1.15rem;
+  margin-bottom: 0.7rem;
+  font-weight: 800;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+}
+.noticia-info p {
+  color: #D3D3D3;
+  font-size: 1.01rem;
+  margin-bottom: 1.12rem;
+  line-height: 1.66;
+  flex: 1;
+}
+.noticia-link {
+  color: #fff;
+  background: #9D4EDD;
+  border-radius: 8px;
+  padding: 0.45rem 1.05rem;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 1.03rem;
+  align-self: flex-start;
+  transition: background 0.15s, color 0.17s, box-shadow 0.15s;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+}
+.noticia-link:hover {
+  background: #FFD700;
+  color: #9D4EDD;
+  box-shadow: 0 1px 8px #FFD70044;
+}
+
+/* Responsive Noticias/Eventos */
+@media (max-width: 900px) {
+  .noticias-grid { gap: 1.3rem; }
+  .eventos-grid { gap: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+  .eventos-container { padding: 3rem 1.5rem; }
+  .eventos-container h1 { font-size: 2.13rem; }
+  .eventos-grid, .noticias-grid { gap: 1.13rem; }
+  .evento-info { padding: 1.19rem; }
+  .noticia-card img { height: 110px; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.noticias-oficiales-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  color: #39FF14;
+  font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-top: 2.5rem;   /* MUCHO espacio encima */
+  margin-bottom: 1.5rem; /* Espacio debajo antes de la grid */
+  letter-spacing: 1px;
+  text-shadow: 0 0 18px #39FF1433;
+  animation: fadeInUp 0.7s;
+}
+
+/* Si quieres aún más separación en mobile: */
+@media (max-width: 700px) {
+  .noticias-oficiales-titulo {
+    font-size: 1.27rem;
+    margin-top: 1.3rem;
+    margin-bottom: 1rem;
+  }
+}
