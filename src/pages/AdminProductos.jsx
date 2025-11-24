@@ -336,7 +336,7 @@ function AdminProductos() {
                 <td>
                         <button
                           onClick={() => handleEliminar(producto.id)} // <-- Vinculado a la función de eliminación
-                          >
+                          className='btneliminar'>
                           Eliminar
                         </button></td>
                     

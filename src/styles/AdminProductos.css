@@ -131,7 +131,7 @@
 }
 
 .btn-editar,
-.btn-eliminar {
+.btneliminar {
  padding: 0.5rem 0.75rem;
  border: none;
  border-radius: 4px;
@@ -152,12 +152,12 @@
  background: #7b2cbf;
 }
 
-.btn-eliminar {
+.btneliminar {
  background: #ff4444;
  color: white;
 }
 
-.btn-eliminar:hover {
+.btneliminar:hover {
  background: #cc3333;
 }
 
